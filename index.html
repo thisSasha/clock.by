@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="./Иконка.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/zero.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часы</title>
+</head>
+
+<body>
+    <audio src="./cuckoo-clock-2.mp3" id="audio"></audio>
+    <div class="box">
+        <div class="popups">
+            <span class="material-symbols-outlined cross" id="cross">
+                close
+            </span>
+            <div class="confTimeSound" id="confTimeSound">
+                <h3>Ежечасовое напоминание</h3>
+                <label for="">Мелодия будет каждый(е):</label>
+                <input type="number" placeholder="Укажите во сколько минут" type="text" id="inputConfTime" class="inputConfTime">
+                <button id="buttonConfTimePopup" class="buttonConfTimePopup">Сохранить</button>
+            </div>
+        </div>
+        <span class="material-symbols-outlined moreButton" id="moreButton">
+            pending
+        </span>
+        <div class="buttonsClock" id="buttonsClock">
+            <span class="material-symbols-outlined buttonConfTime" id="buttonConfTime">
+                update
+            </span>
+            <span class="material-symbols-outlined button2">
+                alarm
+            </span>
+        </div>
+        <div class="point"></div>
+        <div class="second-arrow"></div>
+        <div class="hour-arrow"></div>
+        <div class="minut-arrow"></div>
+        <p id="time">Подождите</p>
+    </div>
+    <script src="./js/simple.js"></script>
+    <script src="./js/everytime.js"></script>
+    <script src="./js/clock.js"></script>
+</body>
+
+</html>

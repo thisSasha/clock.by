@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200&display=swap');
+
+@font-face {
+    font-family: 'timer';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/CursedTimerUlil.ttf);
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../Code.jpg);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body:root {
+    --secondStartPosition: 0deg;
+    --secondEndPosition: 0deg;
+    --minutStartPosition: 0deg;
+    --minutEndPosition: 0deg;
+    --hourStartPosition: 0deg;
+    --hourEndPosition: 0deg;
+}
+
+.box {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../bg.svg);
+    position: relative;
+    border: 3px solid white;
+    height: 80vh;
+    width: 80vh;
+    border-radius: 50%;
+}
+
+.point {
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: black solid 1px;
+    width: 4%;
+    height: 4%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.second-arrow {
+    background-color: rgb(0, 0, 255);
+    transform-origin: 50% 84%;
+    transform: translate(-50%, 16%);
+    width: 0.6%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    animation: infinite linear arrowSecond 60s;
+}
+
+.minut-arrow {
+    background-color: rgb(188, 0, 188);
+    transform-origin: 50% 84%;
+    transform: translate(-50%, 16%);
+    width: 1.5%;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    animation: infinite linear arrowMinut 3600s;
+}
+
+.hour-arrow {
+    background-color: #fff;
+    transform-origin: 50% 84%;
+    transform: translate(-50%, 16%);
+    width: 2%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    animation: infinite linear arrowHour 43200s;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#time {
+    font-family: 'timer';
+    font-size: 500px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    font-size: large;
+    transform: translate(-50%, 0%);
+}
+
+@keyframes arrowSecond {
+    0% {
+        transform: translate(-50%, 16%) rotate(var(--secondStartPosition));
+    }
+
+    100% {
+        transform: translate(-50%, 16%) rotate(var(--secondEndPosition));
+    }
+}
+
+@keyframes arrowMinut {
+    0% {
+        transform: translate(-50%, 16%) rotate(var(--minutStartPosition));
+    }
+
+    100% {
+        transform: translate(-50%, 16%) rotate(var(--minutEndPosition));
+    }
+}
+
+@keyframes arrowHour {
+    0% {
+        transform: translate(-50%, 16%) rotate(var(--hourStartPosition));
+    }
+
+    100% {
+        transform: translate(-50%, 16%) rotate(var(--hourEndPosition));
+    }
+}
+
+@media not (orientation:landscape) {
+    .box {
+
+        height: 80vw;
+        width: 80vw;
+    }
+
+    #time {
+        bottom: 50%;
+    }
+}
+
+@media(orientation:landscape) {
+    .box {
+        height: 80vh;
+        width: 80vh;
+    }
+}
+
+.material-symbols-outlined {
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 200,
+        'opsz' 48;
+    font-size: 300%;
+    color: white;
+}
+
+.buttonsClock {
+    display: none;
+}
+
+.buttonsClock * {
+    opacity: 0;
+}
+
+.popups {
+    border: 40% rgba(0, 0, 0, 0.297) solid;
+    line-height: 150%;
+    text-align: center;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 25;
+
+}
+
+h3 {
+    font-size: 24px;
+}
+.confTimeSound>input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.cross {
+    display: none;
+    height: 30px;
+    width: 30px;
+    color: rgb(255, 100, 100);
+    font-size: 30px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.confTimeSound {
+    display: none;
+    border-radius: 10px;
+    padding: 6% 2% 3% 2%;
+    background-color: rgb(215, 215, 215);
+}
+.visible {
+    transition: 400ms;
+    opacity: 1;
+    display: block;
+}
+
+.visible * {
+    transition: 400ms;
+    opacity: 1;
+    display: inline-block;
+}
+
+.moreButton {
+    z-index: 22;
+    position: absolute;
+    display: inline-block;
+    bottom: 50%;
+    left: 20%;
+    transform: translate(50%, 50%);
+}
+
+.buttonConfTime {
+    bottom: 60%;
+    left: 25%;
+}
+
+.button2 {
+    bottom: 40%;
+    left: 25%;
+}
+
+.confTimeSound>input,button {
+    width: 80%;
+    border-radius: 5px;
+    padding: 5px 16px 5px 16px;
+}
+
+.confTimeSound>input {
+    margin-bottom: 8px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.confTimeSound>input::placeholder {
+    font-weight: 500;
+    font-style: normal;
+}
+
+.confTimeSound>button {
+    font-weight: 600;
+    background-color: rgb(167, 212, 255);
+}
