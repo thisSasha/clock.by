@@ -16,15 +16,23 @@
 <body>
     <audio src="./cuckoo-clock-2.mp3" id="audio"></audio>
     <div class="box">
-        <div class="popups">
+        <div class="popups" id="popups">
             <span class="material-symbols-outlined cross" id="cross">
                 close
             </span>
             <div class="confTimeSound" id="confTimeSound">
                 <h3>Ежечасовое напоминание</h3>
                 <label for="">Мелодия будет каждый(е):</label>
-                <input type="number" placeholder="Укажите во сколько минут" type="text" id="inputConfTime" class="inputConfTime">
+                <input type="number" onkeyup="this.value = this.value.replace(/[^0-9,+]/g,'');" max="59" min="1"
+                    placeholder="Укажите во сколько минут" type="text" id="inputConfTime" class="inputConfTime">
                 <button id="buttonConfTimePopup" class="buttonConfTimePopup">Сохранить</button>
+            </div>
+            <div class="confTimeSound" id="confTimerSound">
+                <h3>Таймер</h3>
+                <label for="">Таймер сработает через:</label>
+                <input type="number" placeholder="Укажите через сколько" type="text" id="inputConfTimer"
+                    class="inputConfTimer">
+                <button id="buttonConfTimerPopup" class="buttonConfTimerPopup">Сохранить</button>
             </div>
         </div>
         <span class="material-symbols-outlined moreButton" id="moreButton">
@@ -34,10 +42,11 @@
             <span class="material-symbols-outlined buttonConfTime" id="buttonConfTime">
                 update
             </span>
-            <span class="material-symbols-outlined button2">
+            <span class="material-symbols-outlined buttonTimer" id="buttonConfTimer">
                 alarm
             </span>
         </div>
+        <button id="smooth" class="smooth">Плавность</button>
         <div class="point"></div>
         <div class="second-arrow"></div>
         <div class="hour-arrow"></div>
@@ -45,7 +54,7 @@
         <p id="time">Подождите</p>
     </div>
     <script src="./js/simple.js"></script>
-    <script src="./js/everytime.js"></script>
+    <script src="./js/more.js"></script>
     <script src="./js/clock.js"></script>
 </body>
 

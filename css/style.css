@@ -26,6 +26,7 @@ body:root {
 }
 
 .box {
+    background-color: rgba(0, 0, 0, 0.925);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -202,7 +203,16 @@ h3 {
     right: 0%;
 }
 
+.smooth{
+    width: auto;
+    padding: 2%;
+    font-size: 10px;
+    position: absolute;
+    top: 25%;
+    left: 70%;
+}
 .confTimeSound {
+    z-index: 23;
     display: none;
     border-radius: 10px;
     padding: 6% 2% 3% 2%;
@@ -224,19 +234,22 @@ h3 {
     z-index: 22;
     position: absolute;
     display: inline-block;
-    bottom: 50%;
+    top: 25%;
     left: 20%;
-    transform: translate(50%, 50%);
 }
 
 .buttonConfTime {
-    bottom: 60%;
-    left: 25%;
+    top: 32%;
+    left: 32%;
 }
 
-.button2 {
-    bottom: 40%;
-    left: 25%;
+.buttonsClock{
+    height: 100%;
+}
+
+.buttonTimer {
+    top: 18%;
+    left: 32%;
 }
 
 .confTimeSound>input,button {
